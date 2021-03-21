@@ -5,6 +5,5 @@
 body {
   width: 100%;
   height: 100vh;
-  background-image: url("./images/blackTexture.svg"),
-    linear-gradient(to bottom, #063c47, black);
+  background-image: linear-gradient(to bottom, #063c47, black);
 }
