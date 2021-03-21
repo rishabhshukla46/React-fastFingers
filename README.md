@@ -1,2 +1,2 @@
-# React-fastFingers
+# project
 Created with CodeSandbox

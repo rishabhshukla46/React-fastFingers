@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  color: #ff5155;
+  padding: 15px 20px 10px 20px;
+}
+.card {
+  display: flex;
+  font-size: 30px;
+  justify-content: baseline;
+}
+.card img {
+  margin-right: 10px;
+  height: 25px;
+  width: 25px;
+}
+.quit-game {
+  display: flex;
+  background-color: transparent;
+  border: none;
+  align-items: center;
+  color: #ff5155;
+  margin-top: 20px;
+  text-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
+  font-family: Gotham;
+  font-size: 30px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+}
+.end-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0 20px 0;
+  color: white;
+}
+.end-header {
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.score-card {
+  font-size: 90px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.play-again {
+  display: flex;
+  background-color: transparent;
+  border: none;
+  align-items: center;
+  color: #ff5155;
+  margin-top: 20px;
+  text-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
+  font-family: Gotham;
+  font-size: 35px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+}
+.play-again img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  object-fit: contain;
+}
+
+@media (max-width: 700px) {
+  .card {
+    font-size: 20px;
+  }
+  .card img {
+    margin-right: 7px;
+    height: 15px;
+    width: 15px;
+  }
+  .quit-game {
+    font-size: 15px;
+    margin-top: 15px;
+  }
+  .end-header {
+    font-size: 35px;
+  }
+  .score-card {
+    font-size: 65px;
+  }
+  .play-again {
+    font-size: 25px;
+  }
+  .play-again img {
+    width: 25px;
+    height: 25px;
+  }
+}
