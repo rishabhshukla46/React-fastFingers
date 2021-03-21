@@ -78,6 +78,7 @@ export default function GamePage({ user }) {
     setGameLevel(newGameLevel);
     const newWord = GameWord(newGameLevel);
     setGameWord(newWord.toUpperCase());
+    setInputWord("");
   };
 
   const quitGame = () => {
