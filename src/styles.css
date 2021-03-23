@@ -2,9 +2,21 @@
   box-sizing: border-box;
   margin: 0;
 }
-body {
-  width: 100%;
+p {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to bottom, #063c47, black);
+}
+.root {
+  margin: 0;
+  padding: 0;
+}
+.App {
+  display: flex;
   height: 100vh;
-  background-image: url("./images/blackTexture.svg"),
-    linear-gradient(to bottom, #063c47, black);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1d3557;
+  padding: 30px 40px 60px 40px;
 }

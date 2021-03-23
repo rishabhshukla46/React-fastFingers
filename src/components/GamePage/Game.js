@@ -50,9 +50,8 @@ export default function Game({
         if (!isCovered && eachScore === bestScore) {
           isCovered = true;
           return (
-            <p style={{ color: "green", borderBlock: 1 }}>
+            <p style={{color: "#1d3557", fontWeight: 600}}>
               GAME {idx - i} - {makeTime(eachScore)}
-              <span style={{ color: "red", fontSize: 10 }}>*high score</span>
             </p>
           );
         }
@@ -64,7 +63,17 @@ export default function Game({
       }
     });
   return (
-    <div>
+    <div className="gamePage">
+      <div className="left-bar">
+          <div className="score-board">
+            <div className="score-heading">SCORE BOARD</div>
+            <div className="scores">{pastScores}</div>
+          </div>
+          <button className="stop-game" onClick={quitGame}>
+            <div className="stop-quitGame">STOP GAME</div>
+          </button>
+        </div>
+      <div className="game-bar">
       <div className="game-header">
         <div className="userInfo">
           <div className="card">
@@ -73,7 +82,7 @@ export default function Game({
           </div>
           <div className="card">
             <img src={Gamepad} alt="gamepad"></img>
-            <p>LEVEL: {newGameLevel(gameLevel)}</p>
+            <p>{newGameLevel(gameLevel)}</p>
           </div>
         </div>
         <div className="userInfo">
@@ -81,14 +90,7 @@ export default function Game({
             <img src={keyboard} alt="gamepad"></img>
             <p>fast fingers</p>
           </div>
-          <div className="card">SCORE: {makeTime(score)}</div>
-        </div>
-      </div>
-      <div className="game-bar">
-        <div className="left-bar">
-          <div className="score-board">
-            <div className="score-heading">SCORE BOARD</div>
-            <div className="scores">{pastScores}</div>
+          <div className="card" style={{fontWeight : 600}}>SCORE: {makeTime(score)}</div>
           </div>
         </div>
         <div className="main-game">
@@ -112,9 +114,9 @@ export default function Game({
 
                 if (i < inputWord.length) {
                   if (char === inputWord.charAt(i).toUpperCase()) {
-                    color = "green";
+                    color = "#1d3557";
                   } else {
-                    color = "blue";
+                    color = "#e63946";
                   }
                 }
                 return (
@@ -137,12 +139,7 @@ export default function Game({
           </div>
         </div>
       </div>
-      <button className="stop-game" onClick={quitGame}>
-        <div className="play-image">
-          <img src={Stop} alt="stop" />
-        </div>
-        <div className="stop-quitGame">STOP GAME</div>
-      </button>
+      
     </div>
   );
 }

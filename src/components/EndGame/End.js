@@ -7,7 +7,7 @@ import redo from "../../images/redo.svg";
 
 export default function End({ user, score, scoreLen, setGame }) {
   return (
-    <div>
+    <div className="endGame">
       <div className="game-header">
         <div className="userInfo">
           <div className="card">
@@ -16,7 +16,7 @@ export default function End({ user, score, scoreLen, setGame }) {
           </div>
           <div className="card">
             <img src={Gamepad} alt="gamepad"></img>
-            <p>LEVEL: {user.level}</p>
+            <p>{user.level}</p>
           </div>
         </div>
         <div className="userInfo">
@@ -35,10 +35,10 @@ export default function End({ user, score, scoreLen, setGame }) {
           </div>
           <div className="redo-btn">PLAY AGAIN</div>
         </button>
-        <button className="quit-game" onClick={() => location.reload()}>
-          <div className="quit-btn">QUIT</div>
-        </button>
       </div>
+      <button className="quit-game" onClick={() => location.reload()}>
+          <div className="quit-btn">QUIT</div>
+      </button>
     </div>
   );
 }
