@@ -15,6 +15,12 @@ const colorPath = (time, timePassed) => {
   return `${path} 283`;
 };
 
+
+const pickColor = (time, timePassed) => {
+  if(time-timePassed < 1)return "#e63946";
+  return "var(--bkg-color, #1d3557)";
+}
+
 export default function Countdown({ count, time, timePassed }) {
   return (
     <div className="countdown">
@@ -41,6 +47,7 @@ export default function Countdown({ count, time, timePassed }) {
                 a 45,45 0 1,0 90,0
                 a 45,45 0 1,0 -90,0
               "
+              style= {{stroke:`${pickColor(time, timePassed)}`}}
             ></path>
           </g>
         </svg>

@@ -1,28 +1,26 @@
 import React from "react";
 import "./End.css";
-import Play from "../../images/playerIcon.svg";
-import keyboard from "../../images/keyBoard.svg";
-import Gamepad from "../../images/gamepad.svg";
-import redo from "../../images/redo.svg";
+import { BsFillPersonFill } from 'react-icons/bs';
+import { FaGamepad, FaKeyboard, FaRedoAlt } from 'react-icons/fa';
 
 export default function End({ user, score, scoreLen, setGame }) {
   return (
-    <div>
+    <div className="endGame">
       <div className="game-header">
         <div className="userInfo">
           <div className="card">
-            <img src={Play} alt="playerIcon"></img>
-            <p>{user.name}</p>
+            <BsFillPersonFill />
+            <div className="card-text">{user.name}</div>
           </div>
           <div className="card">
-            <img src={Gamepad} alt="gamepad"></img>
-            <p>LEVEL: {user.level}</p>
+            <FaGamepad />
+            <div className="card-text">{user.level}</div>
           </div>
         </div>
         <div className="userInfo">
           <div className="card">
-            <img src={keyboard} alt="gamepad"></img>
-            <p>fast fingers</p>
+            <FaKeyboard />
+            <div className="card-text">fast fingers</div>
           </div>
         </div>
       </div>
@@ -31,14 +29,14 @@ export default function End({ user, score, scoreLen, setGame }) {
         <div className="score-card">{score}</div>
         <button className="play-again" onClick={setGame}>
           <div className="redo">
-            <img src={redo} alt="redo" />
+            <FaRedoAlt />
           </div>
           <div className="redo-btn">PLAY AGAIN</div>
         </button>
-        <button className="quit-game" onClick={() => location.reload()}>
-          <div className="quit-btn">QUIT</div>
-        </button>
       </div>
+      <button className="quit-game" onClick={() => location.reload()}>
+          <div className="quit-btn">QUIT</div>
+      </button>
     </div>
   );
 }

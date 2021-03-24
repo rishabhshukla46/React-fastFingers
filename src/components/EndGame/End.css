@@ -1,104 +1,152 @@
-* {
-  box-sizing: border-box;
+.endGame{
+  width: 80%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: var(--box-bkg, #f1faee);
+  padding: 20px 50px 50px 50px;
 }
-p {
-  margin: 0;
-  padding: 0;
-}
-.game-header {
+.game-header{
   display: flex;
   justify-content: space-between;
-  color: #ff5155;
+  color: var(--text-type1, #1d3557);
   padding: 15px 20px 10px 20px;
+  font-family: Helvetica;
 }
 .card {
   display: flex;
-  font-size: 30px;
+  font-size: 20px;
   justify-content: baseline;
+  height: fit-content;
 }
-.card img {
-  margin-right: 10px;
-  height: 25px;
-  width: 25px;
+.card-text{
+  margin-left: 5px;
 }
-.quit-game {
+.quit-game{
+  padding: 5px 10px 5px 10px;
   display: flex;
-  background-color: transparent;
+  background-color: #e63946;
   border: none;
-  align-items: center;
-  color: #ff5155;
-  margin-top: 20px;
+  border-radius: 10px;
+  justify-content: flex-start;
+  margin-top: 15px;
   text-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
-  font-family: Gotham;
   font-size: 30px;
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.2;
+  color: var(--box-bkg, #f1faee);
+  font-family: Helvetica;
 }
-.end-game {
+.quit-game:hover{
+  outline: none;
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+.quit-game:active{
+  outline: none;
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+.end-game{
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 50px 0 20px 0;
-  color: white;
+  color: var(--text-type2, #457b9d);
 }
-.end-header {
+.end-header{
   font-size: 50px;
   font-weight: 500;
   line-height: 1.2;
+  font-family: Helvetica;
 }
-.score-card {
+.score-card{
   font-size: 90px;
   font-weight: 500;
   line-height: 1.2;
+  font-family: Helvetica;
 }
-.play-again {
+.play-again{
+  padding: 5px 10px 5px 10px;
   display: flex;
-  background-color: transparent;
+  background-color: var(--text-type1, #1d3557);
   border: none;
+  border-radius: 10px;
   align-items: center;
-  color: #ff5155;
+  color: var(--box-bkg, #f1faee);
   margin-top: 20px;
   text-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
-  font-family: Gotham;
   font-size: 35px;
   font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 1.2;
+  font-family: Helvetica;
 }
-.play-again img {
-  width: 40px;
-  height: 40px;
+.play-again:hover{
+  outline: none;
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+.play-again:active{
+  outline: none;
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+.redo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
   margin-right: 10px;
   object-fit: contain;
 }
-
-@media (max-width: 700px) {
+.redo svg{
+  fill: var(--box-bkg, #f1faee);
+}
+@media (max-width: 700px){
   .card {
-    font-size: 20px;
+      font-size: 20px;
   }
   .card img {
-    margin-right: 7px;
-    height: 15px;
-    width: 15px;
+      margin-right: 7px;
+      height: 15px;
+      width: 15px;
   }
-  .quit-game {
-    font-size: 15px;
-    margin-top: 15px;
+  .quit-game{
+      font-size: 15px;
+      margin-top: 15px;
   }
-  .end-header {
-    font-size: 35px;
+  .play-again{
+    margin-top: 50px;
   }
-  .score-card {
-    font-size: 65px;
+  .score-card{
+      font-size: 65px;
   }
-  .play-again {
-    font-size: 25px;
+  .play-again{
+      font-size: 25px;
   }
   .play-again img {
-    width: 25px;
-    height: 25px;
+      width: 25px;
+      height: 25px;
+  }
+}
+@media (max-width: 550px){
+  .endGame{
+    width: 100%;
+    padding: 10px;
+  }
+  .game-header{
+    padding: 5px;
+  }
+  .card{
+    font-size: 15px;
+  }
+  .end-header{
+    font-size: 35px;
+  }
+  .quit-game{
+    justify-content: center;
   }
 }

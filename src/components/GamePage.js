@@ -3,6 +3,8 @@ import GameWord from "../data/GameWord";
 import Timer from "./Timer";
 import Game from "./GamePage/Game";
 import End from "./EndGame/End";
+import useSound from 'use-sound';
+import wordChangeSound from "../audio/wordSound.wav";
 
 const CONFIG_LEVEL = {
   Easy: 1,
@@ -29,6 +31,7 @@ export default function GamePage({ user }) {
   const [bestScore, setBestScore] = useState(0);
   const [inputWord, setInputWord] = useState("");
   const [lastScore, setLastScore] = useState(0);
+  const [wordChangeAudio] = useSound(wordChangeSound);
 
   useEffect(() => {
     let scoreUpdate;
@@ -74,6 +77,7 @@ export default function GamePage({ user }) {
   }, []);
 
   const changeWord = () => {
+    wordChangeAudio();
     const newGameLevel = gameLevel + CONFIG_FACTOR;
     setGameLevel(newGameLevel);
     const newWord = GameWord(newGameLevel);
@@ -92,7 +96,6 @@ export default function GamePage({ user }) {
 
   if (game) {
     return (
-      <div>
         <Game
           user={user}
           word={gameWord}
@@ -108,7 +111,6 @@ export default function GamePage({ user }) {
           bestScore={bestScore}
           game={game}
         />
-      </div>
     );
   } else {
     return (
