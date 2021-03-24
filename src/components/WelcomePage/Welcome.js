@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Welcome.css";
-import start from "../../images/startGameIcon.svg";
-import keyboard from "../../images/keyBoard.svg";
+import {SvgImages} from "../../svgImages";
+import {FaPlay} from 'react-icons/fa';
 
 export default function Welcome({
   user,
@@ -15,8 +15,11 @@ export default function Welcome({
   return (
     <div className="welcome-page">
       <div className="header">
-        <div className="main-image">
-          <img src={keyboard} alt="keyboard" />
+        
+        <div className="main-image">          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 234.17 156.113">
+              <path d={SvgImages.keyboard} opacity="1" transform="translate(0 -4.5)"/>
+          </svg>
         </div>
         <p className="heading">Fast Fingers</p>
         <div className="sub-heading">
@@ -60,9 +63,7 @@ export default function Welcome({
         </div>
         {levelError ? levelErrorMessage : ""}
         <button className="start-game" type="submit">
-          <div className="play-image">
-            <img src={start} alt="play" />
-          </div>
+          <FaPlay />
           <div className="start-btn">START GAME</div>
         </button>
       </form>
