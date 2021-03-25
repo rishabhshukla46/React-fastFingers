@@ -1,11 +1,11 @@
-.gamePage{
+.gamePage {
   display: flex;
   width: 80%;
   height: 100%;
   border-radius: 10px;
   background-color: var(--box-bkg, #f1faee);
 }
-.left-bar{
+.left-bar {
   width: 20%;
   border-radius: 10px 0 0 10px;
   background-color: var(--text-type2, #457b9d);
@@ -13,12 +13,12 @@
   flex-direction: column;
   justify-content: space-between;
 }
-.score-board{
+.score-board {
   border-radius: 10px;
   width: 100%;
   height: 85%;
 }
-.score-heading{
+.score-heading {
   display: flex;
   border-radius: 10px 0 0 0;
   color: black;
@@ -28,7 +28,7 @@
   padding: 17px;
 }
 
-.scores{
+.scores {
   display: flex;
   flex-direction: column;
   font-family: Arial, Helvetica, sans-serif;
@@ -37,17 +37,20 @@
   padding-top: 10px;
   color: white;
 }
-.scores p{
+.scores p {
   padding: 5px 0 5px 10px;
   font-family: Arial, Helvetica, sans-serif;
   color: #f1faee;
 }
-.game-bar{
+.high-score {
+  margin: 0;
+}
+.game-bar {
   display: flex;
   flex-direction: column;
   padding: 5px 20px 20px 20px;
 }
-.game-header{
+.game-header {
   display: flex;
   justify-content: space-between;
   font-family: Helvetica;
@@ -60,13 +63,12 @@
   width: 100%;
 }
 
-
-.game-bar{
+.game-bar {
   display: flex;
   width: 75%;
   justify-content: space-between;
 }
-.main-game{
+.main-game {
   padding: 0px 50px 110px 50px;
   min-width: 60%;
   display: flex;
@@ -100,7 +102,7 @@
 .input-word input[type="text"]:focus {
   outline: none;
 }
-.stop-game{
+.stop-game {
   margin: 5px;
   padding: 5px 10px 5px 10px;
   display: flex;
@@ -119,80 +121,80 @@
   font-family: Helvetica;
 }
 
-.stop-game:hover{
+.stop-game:hover {
   border-radius: 0px;
   transform: scale(1.05);
   transition: 0.2s;
 }
-.stop-game:active{
+.stop-game:active {
   border-radius: 0px;
   transform: scale(1.1);
   transition: 0.2s;
 }
-@media (max-width: 768px){
+@media (max-width: 768px) {
   .card {
-      font-size: 15px;
+    font-size: 15px;
   }
-  .stop-game{
-      font-size: 15px;
+  .stop-game {
+    font-size: 15px;
   }
   .stop-game img {
-      width: 30px;
-      height: 30px;
+    width: 30px;
+    height: 30px;
   }
-  .left-bar{
-      width: 30%;
+  .left-bar {
+    width: 30%;
   }
-  .score-board{
-      font-size: 10px;
-      padding: 10px 2px 10px 2px;
+  .score-board {
+    font-size: 10px;
+    padding: 10px 2px 10px 2px;
   }
   .game-word p {
-      font-size: 40px;
+    font-size: 40px;
   }
   .input-word input[type="text"] {
-      font-size: 15px;
+    font-size: 15px;
   }
   .base-timer {
-      margin-top: 50px;
-      position: relative;
-      height: 100px;
-      width: 100px;
+    margin-top: 50px;
+    position: relative;
+    height: 100px;
+    width: 100px;
   }
   .base-timer__path-elapsed {
-      stroke-width: 5px;
+    stroke-width: 5px;
   }
   .base-timer__label {
-      height: 100px;
-      width: 100px;
-      font-size: 30px;
+    height: 100px;
+    width: 100px;
+    font-size: 30px;
   }
-  .scores{
-      font-size: 10px;
+  .scores {
+    font-size: 10px;
   }
 }
-@media (max-width: 550px){
-  .gamePage{
+@media (max-width: 550px) {
+  .gamePage {
     flex-direction: column-reverse;
   }
-  .left-bar{
+  .left-bar {
     width: 100%;
     border-radius: none;
   }
-  .game-bar{
+  .game-bar {
     width: 100%;
     padding: 5px;
   }
-  .game-word p{
+  .game-word p {
     font-size: 25px;
   }
-  .main-game{
+  .main-game {
     padding: 0px 10px 30px 10px;
   }
-  .score-heading{
+  .score-heading {
     font-size: 15px;
   }
-  .scores p{
+  .scores p {
     font-size: 15px;
   }
 }

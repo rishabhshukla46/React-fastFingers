@@ -4,7 +4,7 @@ import GamePage from "./components/GamePage";
 import "./styles.css";
 
 export default function App() {
-  const [user, setUser] = useState({ name: "", level: "" });
+  const [user, setUser] = useState({ name: "", level: "Easy" });
   const [game, setGame] = useState(false);
 
   const handleThemeChange = (e) => {
@@ -18,14 +18,14 @@ export default function App() {
         root.style.setProperty("--input-type1", "#f1faee");
         break;
       case "Dark":
-        root.style.setProperty('--bkg-color', '#cad2c5');
+        root.style.setProperty("--bkg-color", "#cad2c5");
         root.style.setProperty("--box-bkg", "#2f3e46");
         root.style.setProperty("--img-color", "#cad2c5");
         root.style.setProperty("--text-type1", "#cad2c5");
         root.style.setProperty("--text-type2", "#84a98c");
         root.style.setProperty("--input-type1", "#2f3e46");
     }
-  }
+  };
 
   const welcomePage = (
     <WelcomePage

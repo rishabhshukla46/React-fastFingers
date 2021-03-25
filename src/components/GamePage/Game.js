@@ -2,8 +2,8 @@ import React, { useEffect, useRef } from "react";
 import "./Game.css";
 import Timer from "../Timer";
 import GameWord from "../../data/GameWord";
-import { BsFillPersonFill } from 'react-icons/bs';
-import { FaGamepad, FaKeyboard } from 'react-icons/fa';
+import { BsFillPersonFill } from "react-icons/bs";
+import { FaGamepad, FaKeyboard } from "react-icons/fa";
 
 const makeTime = (time) => {
   const minutes = Math.floor(time / 60);
@@ -48,8 +48,14 @@ export default function Game({
         if (!isCovered && eachScore === bestScore) {
           isCovered = true;
           return (
-            <p style={{color: "#1d3557", fontWeight: 600}}>
+            <p style={{ color: "#1d3557", fontWeight: 600 }}>
               GAME {idx - i} - {makeTime(eachScore)}
+              <p
+                className="high-score"
+                style={{ color: "#1d3557", fontSize: "8px" }}
+              >
+                *Personal Best*
+              </p>
             </p>
           );
         }
@@ -63,32 +69,34 @@ export default function Game({
   return (
     <div className="gamePage">
       <div className="left-bar">
-          <div className="score-board">
-            <div className="score-heading">SCORE BOARD</div>
-            <div className="scores">{pastScores}</div>
-          </div>
-          <button className="stop-game" onClick={quitGame}>
-            <div className="stop-quitGame">STOP GAME</div>
-          </button>
+        <div className="score-board">
+          <div className="score-heading">SCORE BOARD</div>
+          <div className="scores">{pastScores}</div>
         </div>
+        <button className="stop-game" onClick={quitGame}>
+          <div className="stop-quitGame">STOP GAME</div>
+        </button>
+      </div>
       <div className="game-bar">
-      <div className="game-header">
-        <div className="userInfo">
-          <div className="card">
-            <BsFillPersonFill />
-            <div className="card-text">{user.name}</div>
+        <div className="game-header">
+          <div className="userInfo">
+            <div className="card">
+              <BsFillPersonFill />
+              <div className="card-text">{user.name}</div>
+            </div>
+            <div className="card">
+              <FaGamepad />
+              <div className="card-text">{newGameLevel(gameLevel)}</div>
+            </div>
           </div>
-          <div className="card">
-            <FaGamepad />
-            <div className="card-text">{newGameLevel(gameLevel)}</div>
-          </div>
-        </div>
-        <div className="userInfo">
-          <div className="card">
-            <FaKeyboard />
-            <div className="card-text">fast fingers</div>
-          </div>
-          <div className="card" style={{fontWeight : 600}}>SCORE: {makeTime(score)}</div>
+          <div className="userInfo">
+            <div className="card">
+              <FaKeyboard />
+              <div className="card-text">fast fingers</div>
+            </div>
+            <div className="card" style={{ fontWeight: 600 }}>
+              SCORE: {makeTime(score)}
+            </div>
           </div>
         </div>
         <div className="main-game">
@@ -137,7 +145,6 @@ export default function Game({
           </div>
         </div>
       </div>
-      
     </div>
   );
 }
