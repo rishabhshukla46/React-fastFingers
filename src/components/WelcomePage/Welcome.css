@@ -5,22 +5,22 @@
   border-radius: 10px;
   background-color: var(--box-bkg, #f1faee);
 }
-.header{
+.header {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 10px;
 }
-.main-image{
+.main-image {
   display: flex;
   justify-content: center;
   width: 20%;
   height: 20%;
 }
-.main-image svg path{
+.main-image svg path {
   fill: var(--img-color, #1d3557);
 }
-.heading{
+.heading {
   width: fit-content;
   margin: 5px;
   font-family: Arial, Helvetica, sans-serif;
@@ -33,11 +33,11 @@
   text-align: left;
   color: var(--text-type1, #1d3557);
 }
-.sub-heading{
+.sub-heading {
   display: flex;
   flex-direction: row;
 }
-.sub-line{
+.sub-line {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
@@ -49,7 +49,7 @@
   text-align: left;
   color: var(--text-type2, #457b9d);
 }
-.sub-heading:before{
+.sub-heading:before {
   content: "";
   display: block;
   width: 100px;
@@ -58,7 +58,7 @@
   margin-top: 10px;
   margin-right: 5px;
 }
-.sub-heading:after{
+.sub-heading:after {
   content: "";
   display: block;
   width: 100px;
@@ -72,19 +72,19 @@
   flex-direction: column;
   align-items: center;
 }
-.form-data{
+.form-data {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 10px;
 }
-.form-field{
+.form-field {
   width: 60%;
   padding: 10px 0 10px 0;
   color: #f1faee;
 }
 
-input[type="text"]{
+input[type="text"] {
   width: 100%;
   font-size: 25px;
   padding: 5px 0 5px 15px;
@@ -94,16 +94,19 @@ input[type="text"]{
   border-color: #1d3557;
   background-color: var(--text-type1, #1d3557);
 }
-input[type="text"]:hover{
+input[type="text"]:hover {
   outline: none;
   transform: scale(1.1);
   transition: 0.2s;
+  box-shadow: 0 0 3pt 2pt var(--text-type2, #457b9d);
 }
-input[type="text"]:focus{
+input[type="text"]:focus {
   transform: scale(1.1);
   transition: 0.2s;
+  outline: none;
+  box-shadow: 0 0 3pt 2pt var(--text-type2, #457b9d);
 }
-.form-field select{ 
+.form-field select {
   width: 100%;
   font-size: 25px;
   padding: 5px 0 5px 15px;
@@ -112,21 +115,23 @@ input[type="text"]:focus{
   color: var(--input-type1, #f1faee);
   border-radius: 10px;
 }
-.select:focus{
+.select:focus {
   outline: none;
   transform: scale(1.1);
   transition: 0.2s;
+  box-shadow: 0 0 3pt 2pt var(--text-type2, #457b9d);
 }
-.select:hover{
+.select:hover {
   transform: scale(1.1);
   transition: 0.2s;
+  box-shadow: 0 0 3pt 2pt var(--text-type2, #457b9d);
 }
-.option{
+.option {
   background-color: var(--input-type1, #f1faee);
-  color:var(--text-type1, #1d3557);
+  color: var(--text-type1, #1d3557);
 }
 
-.start-game{
+.start-game {
   height: 50px;
   object-fit: contain;
   box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.16);
@@ -141,19 +146,21 @@ input[type="text"]:focus{
   padding: 0 15px 0 15px;
   border-radius: 10px;
 }
-.start-game:active{
+.start-game:active {
   outline: none;
   border: none;
   border: none;
   transform: scale(1.1);
 }
-.start-game:hover{
+.start-game:hover {
   outline: none;
   border: none;
+  cursor: pointer;
   transform: scale(1.1);
   transition: 0.2s;
+  box-shadow: 0 0 3pt 2pt var(--bkg-color, #1d3557);
 }
-.start-btn{
+.start-btn {
   margin-left: 5px;
 }
 .error {
@@ -185,64 +192,64 @@ input[type="text"]:focus{
   }
 }
 
-@media (max-width: 850px){
-  input[type="text"]{
-      font-size: 15px;
+@media (max-width: 850px) {
+  input[type="text"] {
+    font-size: 15px;
   }
-  .form-field select{
-      font-size: 15px;
+  .form-field select {
+    font-size: 15px;
   }
-  .start-game{
-      font-size: 15px;
+  .start-game {
+    font-size: 15px;
   }
   .start-game img {
-      width: 30px;
-      height: 30px;
+    width: 30px;
+    height: 30px;
   }
 }
-@media (max-width: 768px){
-  .main-image{
+@media (max-width: 768px) {
+  .main-image {
     width: 50%;
   }
-  .heading{
-      font-size: 40px;
+  .heading {
+    font-size: 40px;
   }
-  .sub-line{
-      font-size: 10px;
+  .sub-line {
+    font-size: 10px;
   }
-  .sub-heading:after{
-      width: 50px;
-      margin-top: 5px;
+  .sub-heading:after {
+    width: 50px;
+    margin-top: 5px;
   }
-  .sub-heading:before{
-      width: 50px;
-      margin-top: 5px;
+  .sub-heading:before {
+    width: 50px;
+    margin-top: 5px;
   }
 }
-@media (max-width: 550px){
+@media (max-width: 550px) {
   .welcome-page {
     padding: 10px;
     width: 95%;
   }
-  .heading{
+  .heading {
     margin-top: 30px;
     font-size: 30px;
   }
-  .sub-line{
+  .sub-line {
     margin-top: 20px;
   }
-  .sub-heading:after{
+  .sub-heading:after {
     margin-top: 25px;
   }
-  .sub-heading:before{
+  .sub-heading:before {
     margin-top: 25px;
   }
-  .form-field{
+  .form-field {
     width: 90%;
     padding: 10px 0 10px 0;
     margin-top: 20px;
   }
-  .start-game{
+  .start-game {
     margin-top: 50px;
   }
 }
