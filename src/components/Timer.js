@@ -19,7 +19,7 @@ export default function Timer({
   useEffect(() => {
     const tick = setInterval(() => {
       setTimePassed(timePassed + 0.01);
-    }, 1);
+    }, 10);
 
     return () => {
       clearInterval(tick);
